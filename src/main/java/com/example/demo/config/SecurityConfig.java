@@ -19,6 +19,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder() {
+		// パスワードの暗号化にBCrypt使用
 		return new BCryptPasswordEncoder();
 	}
 	// セキュリティ設定を無視するパスを指定
