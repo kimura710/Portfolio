@@ -41,7 +41,7 @@
 						<div class="form-group row">
 							<label class="col-md-2 control-label　text-muted">材料</label>
 							<div class="col-md-10">
-								<textarea class="form-control" id="textarea" name="recette"
+								<textarea class="form-control" id="textarea" name="recette" rows="12" cols="40"
 									th:value="*{recette}"></textarea>
 								<div class="text-danger"
 									th:if="${#fields.hasErrors('recette')} " th:errors="*{recette}">
@@ -50,7 +50,7 @@
 							<div class="form-group row">
 								<label class="col-md-2 control-label　text-muted">作り方メモ</label>
 								<div class="col-md-10">
-									<textarea class="form-control" id="textarea" name="memo"
+									<textarea class="form-control" id="textarea" name="memo" rows="12" cols="40"
 										th:value="*{memo}"></textarea>
 									<div class="text-danger" th:if="${#fields.hasErrors('memo')} "
 										th:errors="*{memo}"></div>
