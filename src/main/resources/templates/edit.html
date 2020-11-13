@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="/css/bootstrap.min.css" />
-<title>メニュー新規</title>
+<title>ルセット詳細変更</title>
 </head>
 <body>
 	<nav class="navbar navbar-inverse">
@@ -14,20 +14,18 @@
 			</div>
 		</div>
 	</nav>
-</head>
-<body>
 	<div class="container">
 		<div class="card card-primary mb-3">
 			<div class="card-header">
-				<h5 class="card-title">新規登録</h5>
+				<h5 class="card-title">メニュー詳細</h5>
 			</div>
 			<div class="card-body">
-				<form th:method="post" th:action="@{/menus}" th:object="${menu}">
+				<form th:action="@{/menus/{id}(id=*id})}" th:method="post"
+					th:object="${menu}">
 					<div class="form-group row">
 						<label class="col-md-2 control-label">タイトル</label>
 						<div class="col-md-10">
-							<input class="form-control" type="text" name="title"
-								th:value="*{title}">
+							<input class="form-control" type="text" th:field="*{title}">
 							<div class="text-danger" th:if="${#fields.hasErrors('title')}"
 								th:errors="*{title}"></div>
 						</div>
@@ -57,11 +55,11 @@
 									<div class="text-danger" th:if="${#fields.hasErrors('memo')} "
 										th:errors="*{memo}"></div>
 								</div>
-								<div class="form-group row">
-									<div class="offset-md-2 col-md-10">
-										<button class="btn btn-primary">新規登録</button>
-									</div>
-								</div>
+							</div>
+							<div class="form-group row">
+							 <div class="offset-md-2 col-md-9">
+							  <button class="btn btn-primary">更新</button>
+							 </div>
 							</div>
 						</div>
 					</div>
