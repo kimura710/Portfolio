@@ -23,7 +23,7 @@
 				<form th:action="@{/menus/{id}(id=*id})}" th:method="post"
 					th:object="${menu}">
 					<div class="form-group row">
-						<label class="col-md-2 control-label">タイトル</label>
+						<label class="col-md-2 control-label　text-muted">タイトル</label>
 						<div class="col-md-10">
 							<input class="form-control" type="text" th:field="*{title}">
 							<div class="text-danger" th:if="${#fields.hasErrors('title')}"
@@ -31,7 +31,7 @@
 						</div>
 					</div>
 					<div class="form-group row">
-						<label class="col-md-2 control-label">コース</label>
+						<label class="col-md-2 control-label　text-muted">コース</label>
 						<div class="col-md-10">
 							<input class="form-control" type="text" name="cource"
 								th:value="*{cource}">
@@ -39,7 +39,7 @@
 								th:errors="*{cource}"></div>
 						</div>
 						<div class="form-group row">
-							<label class="col-md-2 control-label">材料</label>
+							<label class="col-md-2 control-label　text-muted">材料</label>
 							<div class="col-md-10">
 								<textarea class="form-control" id="textarea" name="recette"
 									th:value="*{recette}"></textarea>
@@ -48,7 +48,7 @@
 								</div>
 							</div>
 							<div class="form-group row">
-								<label class="col-md-2 control-label">作り方メモ</label>
+								<label class="col-md-2 control-label　text-muted">作り方メモ</label>
 								<div class="col-md-10">
 									<textarea class="form-control" id="textarea" name="memo"
 										th:value="*{memo}"></textarea>
